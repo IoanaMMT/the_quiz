@@ -26,8 +26,11 @@ for i in range(1, len(questions)+1):
 	answer = raw_input(questions[i]) # how to expect strings and integers 
 	
 	for i in range(1,len(answers)+1):
-		if answer == answers[i]:
-			print("T")
+		current_answer = answers[i]
+		print(current_answer)
+
+		if type(current_answer) is int:
+			answer = int(answer)
 
 		for x in answers[i]:
 			if answer == x:
