@@ -27,7 +27,7 @@ class Course:
 class CourseForKids(Course):
 
 	def price_for_kids(self, age):
-		self.age = age
+		self.age = int(age)
 
 		if self.age < 18:
 			return self.course_price() * 0.5
