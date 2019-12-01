@@ -1,5 +1,5 @@
 class Course:
-	def __init__(self, name, weekly_price, lenght, course_type = "python", passing_grade = 5):
+	def __init__(self, name, weekly_price, lenght, course_type = "python", passing_grade = 5, age = 18):
 		self.name = name
 		self.weekly_price = weekly_price
 		self.lenght = lenght
@@ -24,3 +24,12 @@ class Course:
 		else:
 			return self.passing_grade
 
+class CourseForKids(Course):
+
+	def price_for_kids(self, age):
+		self.age = age
+
+		if self.age < 18:
+			return self.course_price() * 0.5
+
+		
