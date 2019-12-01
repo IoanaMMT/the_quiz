@@ -5,6 +5,7 @@ class Course:
 		self.lenght = lenght
 		self.course_type = course_type
 		self.passing_grade = passing_grade
+		self.age = int(age)
 
 	def course_price(self):
 		if self.course_type == "python":
@@ -26,8 +27,7 @@ class Course:
 
 class CourseForKids(Course):
 
-	def price_for_kids(self, age):
-		self.age = int(age)
+	def price_for_kids(self):
 
 		if self.age < 18:
 			return self.course_price() * 0.5
