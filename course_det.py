@@ -1,6 +1,6 @@
 from course import *
 
-course = CourseForKids("Introduction", 100, 8, "python", 17)
+course = CourseForKids("Introduction", 100, 8, "Java", 5, 16)
 
 print course.name
 print course.course_price()
